@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #004a99;
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* Make the main container stretch horizontally */
+    max-width: 100%; /* Ensure it takes the full width of the screen */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+p {
+    line-height: 1.8; /* Increase line spacing between paragraph lines */
+    overflow-wrap: break-word; /* Ensure long words break to prevent overflow */
+}
+
+.example {
+    display: none; /* Hide all examples by default */
+    margin: 20px auto; /* Center the boxes */
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Make the boxes stretch horizontally */
+    max-width: 70%; /* Ensure it takes the full width of the screen */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.interactive-button {
+    background-color: #004a99;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Make the buttons smaller */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjust font size for smaller buttons */
+    margin-top: 10px; /* Add margin to prevent overlap with text */
+    white-space: nowrap; /* Prevent buttons from splitting to a new line */
+}
+
+.interactive-button:hover {
+    background-color: #00336a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004a99;
+    color: white;
+    margin-top: auto;
+}
+
+/* Mini-Tab */
+.minimized {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #004a99;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.minimized.hidden {
+    display: none;
+}
+
+/* Mini-Modal */
+.mini-modal {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1100;
+}
+
+.mini-modal.hidden {
+    display: none;
+}
+
+.mini-modal .modal-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.mini-modal .close-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.mini-modal .close-button:hover {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form button {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+}
+
+form button {
+    width: auto;
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-button {
+    background-color: #004a99;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Make the buttons smaller */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjust font size for smaller buttons */
+    margin: 0 10px;
+    white-space: nowrap; /* Prevent buttons from splitting to a new line */
+}
+
+.carousel-button:hover {
+    background-color: #00336a;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between items */
+    overflow: hidden;
+    gap: 10px;
+    width: 100%; /* Full-width container */
+    box-sizing: border-box;
+}
+
+/* Active Items */
+.example.active {
+    display: block; /* Show active items */
+}
+
+/* Responsive Design: Adjust Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .example {
+        max-width: 100%; /* Full-width on smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+}
+
+.ad-button {
+    /* Ensure ad buttons have proper spacing */
+    margin: 20px 0; /* Add vertical margin */
+    padding: 8px 12px; /* Make the buttons smaller */
+    font-size: 0.9rem; /* Adjust font size for smaller buttons */
+    white-space: nowrap; /* Prevent buttons from splitting to a new line */
+}
